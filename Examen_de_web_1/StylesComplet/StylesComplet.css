@@ -1,0 +1,374 @@
+.container{
+            width: 100%;
+            height: 100vh;
+            
+}
+
+.tete{
+    width: 101%;
+    height: 6.5vh;
+    background-color: blue;
+    display: flex;
+    margin-left: -1.1vh;
+    margin-top: -1.2vh;
+    
+}
+.tete2{
+    width: 101%;
+    height: 24vh;
+    background-color:white;
+    display: flex;
+    margin-left: -1.1vh;
+    margin-top: -1.2vh;
+    
+}
+
+.logo1{
+        width: 16%;
+        height: 16vh;
+        background: url(../Examen_de_web_1/Images/logo1.png);
+        background-position: center;
+        background-size: 70%;
+        background-repeat: no-repeat;
+        margin-top: 5vh;
+        margin-left: 7vh;
+       
+}
+
+.Republique{
+    width: 49.5%;
+    height: 20vh;
+    border-left: 1px solid red;
+    margin-top: 2.5vh;
+}
+
+.logo2{
+    width: 16%;
+    height: 16vh;
+    background: url(../Examen_de_web_1/Images/logo2.png);
+    background-position: center;
+    background-size: 70%;
+    background-repeat: no-repeat;
+    margin-top: 5vh;
+}
+
+.flex{
+        justify-content: center;
+        align-items: center;
+        display: flex;
+}
+
+
+
+.tete3{
+    width: 101%;
+    height: 8vh;
+    background-color: blue;
+    display: flex;
+    margin-left: -1.1vh;
+    
+}
+
+
+
+
+/* ====================================================les codes en pied =================================================*/
+
+.enpied{
+            width: 102%;
+            height: 73vh;
+            background-color: black;
+            margin-left: -2vh;
+            display: flex;
+            margin-top:2%;
+}
+
+.block1{
+            width: 33%;
+            height:53vh;
+            
+}
+
+.block2{
+    width: 30%;
+    height:53vh;
+    display: flex;
+}
+
+.block3{
+    width: 36%;
+    height:53vh;
+    position: relative;
+}
+
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++les codes du milieu++++++++++++++++++++++++++++++++++++++++++++ */
+
+.milieu{
+
+    width: 100%;
+    height: 130vh;
+}
+
+/* ========================================== une petite animation des images ============================================  */
+
+.slider{
+    position: relative;
+    height: 65vh;
+    width: 100%;
+    overflow: hidden;
+}
+.slide{
+
+    position: absolute;
+    width: 100%;
+    height: 65vh;
+    opacity: 0;
+    animation: slideAnimation 7s infinite;
+}
+
+/* ========================================leur exploitations en utilisant les children ==========================================*/
+
+.slide:nth-child(1){
+    animation-delay:0s;
+}
+
+.slide:nth-child(2){
+    animation-delay:3s;
+}
+
+.slide:nth-child(3){
+    animation-delay:6s;
+}
+
+@keyframes slideAnimation {
+    0%{
+        opacity: 0;
+    }
+
+    10%{
+        opacity: 1;
+    }
+    40%{
+        opacity: 1;
+    }
+
+    50%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
+    
+}
+
+/* ================================================deuxieme animation du texte====================================== */
+
+.slideN1{
+    opacity: 0;
+    animation: slideD 2s forwards;
+}
+@keyframes slideD {
+
+    0%{
+        opacity: 0;
+        transform: translateY(-50);
+    }
+    100%{
+    opacity: 0;
+    transform: translateY(0);
+    }
+}
+
+.slideN:nth-child(1){
+    animation-delay: 0s;
+}
+
+.slideN:nth-child(2){
+    animation-delay: 3s;
+}
+
+.slideN:nth-child(3){
+    animation-delay: 6s;
+}
+
+.plusDinfos{
+    width: 13%;
+    height: 10vh;
+    background-color: blue;
+    z-index: 1000;
+    margin-top: 75%;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    cursor: pointer;
+    margin-left: 60vh;
+}
+.plusDinfos:hover{
+    
+    background-color: rgb(255, 0, 0);
+    transition: 2s;
+}
+
+
+
+/* ==============================================La partie POP UP=============================================================  */
+
+#MinistrePOP{
+    width: 9%;
+    height: 5vh;
+    background-color: rgb(8, 8, 216);
+    z-index: 1000;
+    top: 38vh;
+    left: 19vh;
+    position: absolute;
+    display: none;
+}
+
+#d2{
+    position: relative; 
+    width: 38vh; 
+    height: 4vh; 
+    margin-left: 4vh; 
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    cursor: pointer;
+}
+#d2:hover + #MinistrePOP{
+
+    display: block;
+    cursor: pointer;
+}
+
+.d3{
+    position: relative;
+    width: 38vh;
+    height: 4vh;
+    margin-left: 4vh;
+    color: white; 
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    position: relative;
+    cursor: pointer;
+}
+
+.d3:hover + .ActualitePOP{
+    display: block;
+    cursor: pointer;
+}
+.ActualitePOP{
+    width: 16%;
+    height: 13vh;
+    background-color: rgb(10, 10, 15);
+    position: absolute;
+    top: 38vh;
+    left: 39vh;
+    z-index: 1000;
+    display: none;
+}
+
+
+
+
+
+.d4{
+    position: relative;
+    width: 38vh;
+    height: 4vh;
+    margin-left: 4vh;
+    color: white; 
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    position: relative;
+    cursor: pointer;
+}
+
+.d4:hover + .GRANDSPOP{
+    display: block;
+    cursor: pointer;
+}
+.GRANDSPOP{
+    width: 17%;
+    height: 13vh;
+    background-color: rgb(10, 10, 15);
+    position: absolute;
+    top: 38vh;
+    left: 60vh;
+    z-index: 1000;
+    display:none;
+}
+
+
+.d5{
+    position: relative;
+    width: 38vh;
+    height: 4vh;
+    margin-left: 4vh;
+    color: white; 
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    position: relative;
+    cursor: pointer;
+}
+
+.d5:hover + .COOPERATIONPOP{
+    display: block;
+    cursor: pointer;
+}
+.COOPERATIONPOP{
+    width: 10%;
+    height: 13vh;
+    background-color: rgb(10, 10, 15);
+    position: absolute;
+    top: 38vh;
+    left: 95vh;
+    z-index: 1000;
+    display:none;
+}
+
+.d6{
+    position: relative;
+    width: 38vh;
+    height: 4vh;
+    margin-left: 4vh;
+    color: white; 
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    position: relative;
+    cursor: pointer;
+}
+
+.d6:hover + .DOCUMENTATIONSPOP{
+    display: block;
+    cursor: pointer;
+}
+.DOCUMENTATIONSPOP{
+    width: 17%;
+    height: 60vh;
+    background-color: rgb(10, 10, 15);
+    position: absolute;
+    top: 38vh;
+    left: 118vh;
+    z-index: 1000;
+    display:none;
+}
+
+/* =====================================================les styles sur l'actualites -========================================  */
+
+.barre{
+
+    width: 95%;
+    height: 13vh; 
+    border-bottom: 12px solid blue;
+    margin-left: 5vh;
+    margin-bottom: 2vh;
+    position: relative;
+}
+
+.barre::before{
+    content: "";
+    width: 100%;
+    height: 13vh; 
+    border-bottom: 1px solid rgb(10, 10, 179);
+    position: absolute;
+    top: -0.5vh;
+    
+}
+
